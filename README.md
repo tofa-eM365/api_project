@@ -73,6 +73,33 @@ GET /api/model/<id>/ - Retrieve an item
 PUT /api/model/<id>/ - Update an item
 DELETE /api/model/<id>/ - Delete an item
 
+### Using Curl
+
+### Get request fo all books
+
+```sh
+curl -X GET http://127.0.0.1:8000/api/books/
+```
+
+### Post request for creating a book
+
+```sh
+curl -X POST http://127.0.0.1:8000/api/books/ -H "Content-Type: application/json" -d '{"title": "1984", "author": "George Orwell", "published_date": "1949-06-08"}'
+```
+
+### Put request for creating a book
+
+```sh
+curl -X PUT http://127.0.0.1:8000/api/books/2/ -H "Content-Type: application/json" -d '{"title": "1984", "author": "George Orwell", "published_date": "1949-06-08"}'
+
+```
+
+### Delete request for deleting books
+
+```sh
+curl -X DELETE http://127.0.0.1:8000/api/books/2/
+```
+
 
 ### Contributing
 
